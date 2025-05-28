@@ -5,12 +5,16 @@ public class LongestSubstringWithoutRepeatingCharacters0003 {
         System.out.println(solution("abcabcbb"));
     }
     public static int solution(String s){
-        int ans = 0;
-        char[] charr = s.toCharArray();
-        System.out.println(charr);
-//        Set<String> set = new LinkedHashSet<>(Arrays.asList(charr));
-
-
-        return ans;
+        int max = 0;
+        int an = 1;
+        for(int i = 1; i< s.length(); i++){
+            if(s.charAt(i) - s.charAt(i-1) ==1){
+                an++;
+            }else{
+                an = 1;
+            }
+            if(max < an ) max = an;
+        }
+        return max;
     }
 }
