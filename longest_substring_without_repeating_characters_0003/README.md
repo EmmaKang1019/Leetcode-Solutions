@@ -18,3 +18,15 @@ not just a substring without duplicates.
     }
     return max;
 ```
+
+## What I learned
+**Sliding Window concept**
+Sliding window is a technique that views an array or string as a continuous range (or "window") and solves problems by moving two pointers forward.
+You can imagine it as a window sliding over a string. The end pointer moves forward to expand the window, and when a condition is violated (like a duplicate character), the start pointer moves forward to shrink the window.
+
+**Java vs. Python**
+In the Java implementation, the Set's contains method was used to check for duplicates,
+while in Python, duplicate checks were done by verifying whether the character exists as a key in a dictionary using s[right] in charDict.
+
+In Java, characters are accessed using s.charAt(index),
+whereas in Python, strings support indexing directly, so you can access each character using s[index].
